@@ -1,0 +1,24 @@
+<template lang="html">
+  <el-form-item>
+    <t slot="label" path="prod.carton_nw" colon>整箱净重:</t>
+    <div class="flex">
+      {{pkg.carton_nw}} KGS
+    </div>
+  </el-form-item>
+</template>
+<script>
+import Mxins from '../pkg-mixins'
+export default {
+  mixins: [Mxins],
+  data () {
+    return {
+    }
+  },
+  methods: {
+  },
+  created () {
+  },
+}
+</script>
+<style>
+</style>

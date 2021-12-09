@@ -1,0 +1,96 @@
+// 配合transition组件使用
+
+
+// fade
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+// height
+.height-fade-enter-active, .height-fade-leave-active {
+  transition: all .5s ease;
+}
+.height-fade-enter, .height-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  // transform: translateY(-100%);
+}
+
+
+// slide-fade
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+
+// bounce
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), border 0s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+}
+
+// slide-from-right
+.slide-from-right-enter-active, .slide-from-right-leave-active {
+  transition: all .3s ease;
+}
+.slide-from-right-enter, .slide-from-right-leave-to {
+  right: -300px !important;
+}

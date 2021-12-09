@@ -1,0 +1,55 @@
+:root {
+  @each $name, $color in $colors {
+    .bg-#{$name} {
+      background-color: $color !important;
+    }
+    .text-#{$name} {
+      color: $color !important;
+    }
+    .border-#{$name} {
+      border-color: $color !important;
+    }
+  
+    .text-#{$name}-hover {
+      &:hover {
+        color: $color !important;
+      }
+    }
+    .border-#{$name}-hover {
+      &:hover {
+        border-color: $color !important;
+      }
+    }
+    --color-#{$name}: #{$color};
+  }
+}
+
+
+.text-link {
+  color: $--color-primary;
+}
+.text-primary {
+  color: $--color-text-primary;
+}
+.text-regular {
+  color: $--color-text-regular;
+}
+.text-secondary {
+  color: $--color-text-secondary;
+}
+.text-placeholder {
+  color: $--color-text-placeholder;
+}
+
+.border-base {
+  border-color: $--border-color-base;
+}
+.border-light {
+  border-color: $--border-color-light;
+}
+.border-lighter {
+  border-color: $--border-color-lighter;
+}
+.border-lightest {
+  border-color: $--border-color-extra-light;
+}

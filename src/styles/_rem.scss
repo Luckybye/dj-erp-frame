@@ -1,0 +1,12 @@
+@if $responsive {
+  html {
+    font-size: 100px;
+    @media (max-width: $mobileWidth) {
+      font-size: calc(100vw / 3.75);
+    }
+  }
+  
+  body {
+    font-size: 0.14rem;
+  }
+}

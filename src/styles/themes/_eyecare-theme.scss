@@ -1,0 +1,21 @@
+
+// 护眼主题
+.dj-erp-theme--eyecare {
+  // 页面背景色
+  --bg-color: #f1f8f8;
+
+  // tab页签bar背景色
+  --tab-header-color: #dce1ee;
+  // tab页签页面背景色
+  --tab-content-color: #fff;
+
+  // 侧边栏
+  // 侧边栏背景
+  --aside-bg-color: #dce1ee;
+  // 侧边栏字体
+  --aside-font-color: #303133;
+  // 侧边栏选中背景(高亮)
+  --aside-active-bg-color: rgba(71,80,90,1);
+  // 侧边栏选中字体(高亮字体)
+  --aside-active-font-color: #fff;
+}

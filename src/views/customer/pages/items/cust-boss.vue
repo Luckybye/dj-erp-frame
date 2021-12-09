@@ -1,0 +1,23 @@
+<template lang="html">
+  <el-form-item>
+    <t slot="label" :path="path" colon>老板:</t>
+    <x-input :result="vm" field="cust_boss" width="100%" @save="onSave" :disabled="disabled" :disabledMap="disabledMap"></x-input>
+  </el-form-item>
+</template>
+<script>
+export default {
+  props: {
+  },
+  data() {
+    return {
+    }
+  },
+  computed: {
+  },
+  methods: {
+  },
+  created () {
+  },
+  beforeDestroy() {}
+}
+</script>

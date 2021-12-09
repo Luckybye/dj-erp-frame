@@ -1,0 +1,32 @@
+@import './mixin.scss';
+@import "./var/dfl-var";
+@import "./themes/index";
+@import "./var/color";
+@import "color";
+@import "border";
+@import "flex";
+@import "layout";
+@import "line-height";
+@import "margin";
+@import "self-reset";
+@import "text";
+@import "rem";
+@import "scrollbar";
+@import "transition";
+@import "bill-status";
+@import "triangle";
+@import "btn";
+@import "full-screen";
+@import "col";
+@import "qq-emoji";
+// @import "~element-ui/packages/theme-chalk/src/index";
+@import "./plugs/element-ui.scss";
+// 公共样式
+@import "common";
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: $font-family;
+}

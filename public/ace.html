@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+  <title>javascript编辑器</title>
+  <style type="text/css" media="screen">
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    #editor {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="html-editor-wrap">
+    <div id="editor"></div>
+    <!-- <div ><button id="rundata" οnclick="rundata()">RUN</button></div>
+    <div ><iframe id="iframe1"></iframe></div>  -->
+
+  </div>
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/ace/1.4.9/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/ace/1.4.9/ext-language_tools.min.js" type="text/javascript"
+    charset="utf-8"></script>
+  <!-- <script src="src/theme-twilight.js" type="text/JavaScript" charset="utf-8"></script> -->
+  <script>
+    ace.require("ace/ext/language_tools");
+    var editor = ace.edit("editor");
+    editor.setOptions({
+      // enableBasicAutocompletion: true,
+      enableSnippets: true,
+      enableLiveAutocompletion: true,//只能补全
+    });
+    editor.session.setTabSize(2);
+    editor.setTheme ("ace/theme/twilight");
+    // editor.setTheme("ace/theme/monokai");//monokai模式是自动显示补全提示
+    editor.getSession().setMode("ace/mode/javascript");//语言 html/javascript/css
+    editor.setFontSize(16);
+    // editor.setReadOnly(true);
+    // document.getElementById('editor').style.fontSize='12px';
+    var source
+    function receiveMessage (e) {
+      if (e.origin !== location.origin) return
+      if (window === e.source) return
+      if (!e.data) return
+      var html = e.data.html || ''
+      var disabled = e.data.disabled
+      disabled && editor.setReadOnly(true);
+      if (typeof html !== 'string') html = JSON.stringify(html)
+      // console.log(html, 55555555)
+      editor.setValue(html)
+      source || listenChange()
+      source = e.source
+    }
+
+    var isChange = false
+
+    function listenChange () {
+      // editor.getSession ().on
+      editor.on('change', function (e) {
+        console.log('changechange')
+        isChange = true
+        source && source.postMessage({
+          type: 'change',
+          value: editor.getValue()
+        }, '*')
+      });
+    }
+
+    function listenBlur () {
+      var inputEl = document.getElementById('editor').querySelector('.ace_text-input')
+      if (!inputEl) return
+      window.removeEventListener("message", listenBlur, false);
+      inputEl.onfocus = function () {
+        setTimeout(function () {
+          inputEl.onblur = function () {
+            console.log('blurblur', isChange)
+            source && source.postMessage({
+              type: 'blur',
+              isChange,
+              value: editor.getValue()
+            }, '*')
+            isChange = false
+          }
+        })
+      }
+    }
+
+    window.addEventListener("message", receiveMessage, false);
+    window.addEventListener("message", listenBlur, false);
+  </script>
+</body>
+
+</html>

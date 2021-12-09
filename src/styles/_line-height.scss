@@ -1,0 +1,9 @@
+.lh-n{
+  line-height: normal;
+}
+
+@each $i in 20, 25, 30, 40, 50{
+  .lh-#{$i} {
+    line-height: #{$i}px !important;
+  }
+}

@@ -1,0 +1,82 @@
+
+.inline-block {
+  display: inline-block !important;
+}
+.block {
+  display: block !important;
+  width: 100%;
+}
+
+.nodisplay {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.vt {
+  vertical-align: top;
+}
+.vm-imp {
+  vertical-align: middle !important;
+}
+.vm {
+  vertical-align: middle;
+}
+.vb {
+  vertical-align: bottom;
+}
+
+.transparent {
+  background: transparent;
+}
+
+.resize {
+  resize: both;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  *zoom: 1;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.blur {
+  filter: blur(3px);
+}
+
+.auto-width {
+  width: auto;
+}
+
+.auto-height {
+  height: auto;
+}

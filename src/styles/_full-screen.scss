@@ -1,0 +1,35 @@
+.full-screen-body {
+  // 隐藏Header
+  &.hidden-header {
+    --header-height: 0px;
+    .dj-header {
+      display: none;
+    }
+  }
+  // 隐藏侧边栏
+  &.hidden-aside {
+    --aside-width: 0px;
+    .dj-aside {
+      display: none;
+    }
+  }
+  // 隐藏Tab Bar
+  &.hidden-tabs {
+    --tab-height: 0px;
+    .main-tabs>.el-tabs__header {
+      display: none;
+    }
+  }
+  // .dj-main, .dj-main > .main-tabs > .el-tabs__content {
+  //   background-color: #fff;
+  //   // padding: 0;
+  // }
+  // .tab-page {
+  //   box-shadow: none;
+  //   background-color:transparent;
+  //   padding:0;
+  //   .page-shadow {
+  //     display: none;
+  //   }
+  // }
+}

@@ -1,0 +1,32 @@
+
+// 默认主题，请勿修改主题class名
+.dj-erp-theme--light {
+  // 页面背景色
+  --bg-color: #f1f8f8;
+
+  // tab页签bar背景色
+  --tab-header-color: #dce1ee;
+  // tab页签边框颜色
+  --tab-border-color: #dfd7d7;
+  // tab页签字体颜色
+  --tab-font-color: #333;
+  // tab页签选中字体(高亮)
+  --tab-active-font-color: #333;
+  // tab页签页面背景色
+  --tab-content-color: #fff;
+
+  // 侧边栏
+  // 侧边栏背景
+  --aside-bg-color: #dce1ee;
+  // 侧边栏字体
+  --aside-font-color: #303133;
+  // 侧边栏选中背景(高亮)
+  --aside-active-bg-color: rgba(71,80,90,1);
+  // 侧边栏选中字体(高亮字体)
+  --aside-active-font-color: #fff;
+
+  // header背景
+  --header-bg-color: #fff;
+  // header字体颜色
+  --header-font-color: #2962FF;
+}

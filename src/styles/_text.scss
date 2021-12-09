@@ -1,0 +1,104 @@
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+.line-through {
+  text-decoration: line-through;
+}
+
+.text-overflow {
+  overflow: hidden !important;
+  // display: inline-block !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+.text-10 {
+  font-size: 10px;
+  transform: scale(0.8);
+  transform-origin: 0% 0%;
+}
+.text-11 {
+  font-size: 11px;
+  transform: scale(0.9);
+}
+@for $i from 12 to 25 {
+  .text-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+@for $i from 1 to 6 {
+  .line-#{$i} {
+    -webkit-line-clamp: $i;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+  }
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-normal, .font-normal {
+  font-weight: normal;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.textarea {
+  -webkit-appearance: none;
+  -webkit-rtl-ordering: logical;
+  flex-direction: column;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  color: inherit;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  // -webkit-writing-mode: horizontal-tb !important;
+}
+
+.break-word {
+  word-break: break-word;
+}
+.break-all {
+  word-break: break-all;
+}
+
+.placeholder {
+  color: #ccc;
+}

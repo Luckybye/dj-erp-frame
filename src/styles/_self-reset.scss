@@ -1,0 +1,45 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none; 
+  margin: 0; 
+}
+/* 火狐 */
+input{
+    -moz-appearance:textfield;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+li:focus {
+  outline: none;
+}

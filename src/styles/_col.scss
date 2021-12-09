@@ -1,0 +1,8 @@
+@for $i from 1 to 25 {
+  @if 24 % $i == 0 {
+    .x-col-#{$i} {
+      width: #{100% / (24 / $i)};
+      display: inline-block;
+    }
+  }
+}

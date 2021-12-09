@@ -1,0 +1,102 @@
+  // 单据状态、审批状态
+  .bill-status {
+    // font-weight: 600;
+    padding: 2px 5px;
+    color: #ffffff;
+    background-color: #bdc3c7;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    white-space: nowrap;
+    // 未生效
+    &.open, &.Open, &.cancle, &.no {
+      background-color: #bdc3c7;
+      border-color: #bdc3c7;
+    }
+    // 待采购
+    &.To_be_purchased {
+      background-color: #BCD2FD;
+      border-color: #BCD2FD;
+    }
+    //审批中
+    &.auditing, &.approval {
+      background-color: orange;
+      border-color: orange;
+    }
+    //审批不通过
+    &.delete {
+      background-color: red;
+      border-color: red;
+    }
+    //撤销
+    &.cancel {
+      background-color: yellow;
+      border-color: yellow;
+      color: #cac3c3;
+    }
+    // 待出运
+    &.normal, &.Normal, &.to_be_shipping, &.unship {
+      background-color: #00BFFF;
+      border-color: #00BFFF;
+    }
+    &.UnChoice, &.unchoice {
+      background-color: rgb(157, 202, 218);
+      border-color: rgb(157, 202, 218);
+    }
+    &.shipping {
+      background-color: rgb(73, 202, 163);
+      border-color: rgb(73, 202, 163);
+    }
+    // 已出运
+    &.Shipped, &.shipped, &.finish, &.negotiated, &.green, &.agree, &.is_account {
+      background-color: #0BBC49;
+      border-color: #0BBC49;
+    }
+    // 待订舱
+    &.To_be_book {
+      background-color: #00BFFF;
+      border-color: #00BFFF;
+    }
+    // 待装箱
+    &.To_be_load, &.no_on_board{
+      background-color: #6592F9;
+      border-color: #6592F9;
+    }
+    // 未结算
+    &.no_settlement, &.no_pu_settle, &.no_forw_settle {
+      background-color: #6590C2;
+      border-color: #6590C2;
+    }
+    // 待报关
+    &.To_be_decl, &.no_declaration {
+      background-color: #5B89F8;
+      border-color: #5B89F8;
+    }
+    // 待收提单
+    &.To_be_bl, &.no_lading_bill {
+      background-color: #4878F6;
+      border-color: #4878F6;
+    }
+    // 待结算
+    &.bk_to_st {
+      background-color: #4878F6;
+      border-color: #4878F6;
+    }
+    // 待议付
+    &.To_be_negotiate, &.no_negotiation, &.un_billed {
+      background-color: blue;
+      border-color: blue;
+    }
+    // 待制证
+    &.no_account {
+      background-color: #FACE91;
+      border-color: #FACE91;
+    }
+    &.Invalid, &.close, &.abandon, &.reject {
+      background-color: #ff2f59;
+      border-color: #ff2f59;
+    }
+    &.Done, &.in_voiced, &.yes {
+      background-color: #0BBC49;
+      border-color: #0BBC49;
+    }
+  }

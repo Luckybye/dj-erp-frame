@@ -1,0 +1,33 @@
+$colors: (
+  red: #e25a36,
+  deepred: #ff2f59,
+
+  grey: #9c9c9c,
+  deepgrey: #666666,
+  lightgrey: #e1e1e1,
+  whitegrey: #eeeeee,
+
+  blue: #6d78e7,
+  deepBlue: #081cf5,
+  lightblue: #409eff,
+  whiteblue: #eaebfc,
+
+  white: #ffffff,
+  green: #5cd992,
+  yellow: #f8e71c,
+  black: #000000,
+
+  orange: rgb(255, 165, 0),
+  deeporange: #FF5F00,
+
+  btnColor: $btnColor,
+  borderColor: $borderColor,
+  activeColor: $activeColor,
+  focusColor: $focusColor,
+
+  primary: $--color-primary,
+  success: $--color-success,
+  warning: $--color-warning,
+  danger: $--color-danger,
+  info: $--color-info,
+)

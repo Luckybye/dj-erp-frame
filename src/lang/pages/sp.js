@@ -1,0 +1,63 @@
+export let filename = {
+  cn: '出运计划',
+  en: 'Shipping Plan',
+}
+
+export let cn = {
+  owner_id: "产品经理",
+  source_type: "来源",
+  update_date: "更新时间",
+  mall_priority: "是否上架",
+  is_spare: "是否有配件",
+  prod_sort: "产品分类",
+  brand: "产品品牌",
+  supplier: "供应商",
+  prod_type: "产品类型",
+  prod_level: "产品等级",
+  prod_label: "标签",
+
+  product: "产品",
+  desc: "描述",
+  model: '型号',
+  busi_user_operator: "销售/跟单",
+  gw_ctn_cbm: "毛/件/体",
+  load_unload_port: "启运港/目的港",
+  quantity_crd: "数量/实际交货",
+  seller_delivery: "供应商/承诺交货",
+  contract_etd: "销售订单/计划出运",
+  stock_process: "进度",
+  cancel_ship: "是否取消出运",
+  etd_date: "客户要求交期",
+  crd_date: "供方实际交期",
+  delivery_date: "供方承诺交期",
+}
+
+export let en = {
+  owner_id: "Owner",
+  source_type: "Source",
+  update_date: "Update Date",
+  mall_priority: "Published On Website",
+  is_spare: "Include Spare Parts",
+  prod_sort: "Prod Category",
+  brand: "Brand",
+  supplier: "Supplier",
+  prod_type: "Prod Type",
+  prod_level: "Prod Level",
+  prod_label: "Tag",
+
+  product: "Product",
+  desc: "Desc",
+  model: 'Model',
+  busi_user_operator: "Busi User",
+  gw_ctn_cbm: "G.W./CTN/CBM",
+  load_unload_port: "POL/POD",
+  quantity_crd: "QTY/CRD Date",
+  seller_delivery: "Supplier/Delivery Date",
+  contract_etd: "SC NO./ETD Date",
+
+  stock_process: "Stock Process",
+  cancel_ship: "是否取消出运",
+  etd_date: "客户要求交期",
+  crd_date: "供方实际交期",
+  delivery_date: "供方承诺交期",
+}
